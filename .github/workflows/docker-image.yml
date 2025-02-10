@@ -22,7 +22,7 @@ jobs:
         run: echo "Tests passed!"
 
       - name: Deploy to Railway
-        uses: jakejarvis/railway-deploy@v1
+        uses: bervProject/railway-deploy@0.1.2-beta
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
