@@ -25,4 +25,4 @@ jobs:
         uses: bervProject/railway-deploy@0.1.2-beta
         with:
           railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          service: "triumphant-insight"  # Replace this with your actual service name
+          service: "CI/CD"  # Replace this with your actual service name
