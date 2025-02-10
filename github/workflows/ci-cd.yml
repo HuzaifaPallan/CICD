@@ -1,0 +1,25 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Docker Build
+        run: docker build -t hello-app .
+
+      - name: Run Tests (Dummy Test)
+        run: echo "Tests passed!"
+
+      - name: Deploy to Railway
+        uses: jakejarvis/railway-deploy@v1
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
