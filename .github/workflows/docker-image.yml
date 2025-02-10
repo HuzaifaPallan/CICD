@@ -21,8 +21,4 @@ jobs:
       - name: Run Tests (Dummy Test)
         run: echo "Tests passed!"
 
-      - name: Deploy to Railway
-        uses: bervProject/railway-deploy@0.1.2-beta
-        with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
-          service: "production"  # Replace this with your actual service name
+      
